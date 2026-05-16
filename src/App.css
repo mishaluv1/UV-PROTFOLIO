@@ -1,0 +1,282 @@
+/* App.css — Peak Portfolio Styles */
+
+/* ========== SECTION REVEAL ========== */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== STAGGER CHILDREN ========== */
+.stagger-children>* {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.stagger-children.visible>*:nth-child(1) {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+}
+
+.stagger-children.visible>*:nth-child(2) {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.stagger-children.visible>*:nth-child(3) {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.stagger-children.visible>*:nth-child(4) {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+}
+
+.stagger-children.visible>*:nth-child(5) {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+
+.stagger-children.visible>*:nth-child(6) {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+}
+
+.stagger-children.visible>* {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== 3D TILT CARD ========== */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.1s ease-out;
+}
+
+.tilt-card-content {
+  transform-style: preserve-3d;
+}
+
+.tilt-card-content>* {
+  transform: translateZ(30px);
+}
+
+/* ========== MOBILE MENU ========== */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ========== PROJECT FILTER TABS ========== */
+.filter-tab {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.filter-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 1px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter-tab.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ========== CONTACT FORM ========== */
+.form-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+/* ========== TECH PILL ========== */
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.tech-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ========== SKILL BAR ENHANCED ========== */
+.skill-bar-glow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+/* ========== LOADER ========== */
+@keyframes loaderPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.loader-dot {
+  animation: loaderPulse 1.4s ease-in-out infinite;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ========== SCROLL INDICATOR ========== */
+@keyframes scrollIndicator {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.scroll-indicator {
+  animation: scrollIndicator 2s ease-in-out infinite;
+}
+
+/* ========== GRID BACKGROUND ========== */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ========== ORB DECORATION ========== */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.orb-blue {
+  background: rgba(59, 130, 246, 0.15);
+  width: 400px;
+  height: 400px;
+}
+
+.orb-purple {
+  background: rgba(139, 92, 246, 0.12);
+  width: 350px;
+  height: 350px;
+}
+
+.orb-emerald {
+  background: rgba(16, 185, 129, 0.1);
+  width: 300px;
+  height: 300px;
+}
+
+/* ========== LINK UNDERLINE ========== */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ========== RESPONSIVE HELPERS ========== */
+@media (max-width: 768px) {
+  .orb {
+    width: 200px;
+    height: 200px;
+    filter: blur(60px);
+  }
+}

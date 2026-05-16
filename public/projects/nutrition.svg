@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2818"/>
+      <stop offset="50%" style="stop-color:#04471c"/>
+      <stop offset="100%" style="stop-color:#0a2e1a"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  <!-- Diagonal lines -->
+  <g opacity="0.04" stroke="white" stroke-width="1">
+    <line x1="0" y1="0" x2="200" y2="200"/><line x1="200" y1="0" x2="400" y2="200"/>
+    <line x1="400" y1="0" x2="600" y2="200"/><line x1="600" y1="0" x2="800" y2="200"/>
+    <line x1="0" y1="200" x2="200" y2="400"/><line x1="200" y1="200" x2="400" y2="400"/>
+    <line x1="400" y1="200" x2="600" y2="400"/><line x1="600" y1="200" x2="800" y2="400"/>
+    <line x1="0" y1="400" x2="200" y2="600"/><line x1="200" y1="400" x2="400" y2="600"/>
+    <line x1="400" y1="400" x2="600" y2="600"/><line x1="600" y1="400" x2="800" y2="600"/>
+  </g>
+  <!-- Glow orbs -->
+  <circle cx="250" cy="200" r="130" fill="#10b981" opacity="0.12" filter="url(#glow3)"/>
+  <circle cx="550" cy="400" r="100" fill="#34d399" opacity="0.08" filter="url(#glow3)"/>
+  <!-- Heart + Apple icon -->
+  <g transform="translate(400,280)" filter="url(#glow3)">
+    <!-- Heart -->
+    <path d="M0,20 C-30,-10 -70,-10 -70,20 C-70,50 0,80 0,80 C0,80 70,50 70,20 C70,-10 30,-10 0,20Z" fill="none" stroke="url(#accent3)" stroke-width="3"/>
+    <!-- Heartbeat line inside -->
+    <polyline points="-30,35 -15,35 -10,25 -5,45 0,35 5,25 10,45 15,35 30,35" fill="none" stroke="url(#accent3)" stroke-width="1.5" opacity="0.5"/>
+    <!-- Apple silhouette -->
+    <path d="M-55,-30 C-55,-55 -35,-70 -15,-70 C0,-70 10,-60 15,-50 C20,-60 30,-70 45,-70 C65,-70 85,-55 85,-30 C85,0 60,30 15,50 C-30,30 -55,0 -55,-30Z" fill="none" stroke="url(#accent3)" stroke-width="2" opacity="0.3"/>
+    <!-- Leaf -->
+    <path d="M15,-50 C25,-65 40,-70 45,-60" fill="none" stroke="url(#accent3)" stroke-width="1.5" opacity="0.3"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">NUTRITION DIETETICS</text>
+  <text x="400" y="550" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="white" opacity="0.4" letter-spacing="4">HEALTH &#x26; WELLNESS</text>
+</svg>

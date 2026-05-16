@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#f77f00"/>
+    </linearGradient>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg1)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="white" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="white" stroke-width="0.5"/>
+  </g>
+  <!-- Glow orb -->
+  <circle cx="600" cy="150" r="120" fill="#e94560" opacity="0.15" filter="url(#glow1)"/>
+  <circle cx="200" cy="450" r="100" fill="#f77f00" opacity="0.1" filter="url(#glow1)"/>
+  <!-- Shopping bag icon -->
+  <g transform="translate(400,300)" filter="url(#glow1)">
+    <rect x="-60" y="-30" width="120" height="140" rx="12" fill="none" stroke="url(#accent1)" stroke-width="3"/>
+    <path d="M-40,-30 C-40,-70 40,-70 40,-30" fill="none" stroke="url(#accent1)" stroke-width="3"/>
+    <line x1="-30" y1="20" x2="30" y2="20" stroke="url(#accent1)" stroke-width="2" opacity="0.5"/>
+    <line x1="-30" y1="50" x2="30" y2="50" stroke="url(#accent1)" stroke-width="2" opacity="0.5"/>
+    <line x1="-30" y1="80" x2="20" y2="80" stroke="url(#accent1)" stroke-width="2" opacity="0.5"/>
+  </g>
+  <!-- Label -->
+  <text x="400" y="520" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">UV STORE</text>
+  <text x="400" y="550" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="white" opacity="0.4" letter-spacing="4">E-COMMERCE</text>
+</svg>
