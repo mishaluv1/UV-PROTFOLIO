@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="accent8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <filter id="glow8">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg8)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="white" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="white" stroke-width="0.5"/>
+  </g>
+  <!-- Glow orbs -->
+  <circle cx="600" cy="150" r="120" fill="#06b6d4" opacity="0.15" filter="url(#glow8)"/>
+  <circle cx="200" cy="450" r="100" fill="#3b82f6" opacity="0.1" filter="url(#glow8)"/>
+  <!-- Shopping cart icon -->
+  <g transform="translate(400,300)" filter="url(#glow8)">
+    <!-- Cart body -->
+    <path d="M-90,-50 L-70,-50 L-50,40 L40,40 L60,-20 L-40,-20"
+          fill="none" stroke="url(#accent8)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Cart handle -->
+    <line x1="-90" y1="-50" x2="-100" y2="-70" stroke="url(#accent8)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Wheels -->
+    <circle cx="-30" cy="60" r="10" fill="none" stroke="url(#accent8)" stroke-width="3"/>
+    <circle cx="20" cy="60" r="10" fill="none" stroke="url(#accent8)" stroke-width="3"/>
+    <circle cx="-30" cy="60" r="3" fill="url(#accent8)"/>
+    <circle cx="20" cy="60" r="3" fill="url(#accent8)"/>
+    <!-- Items in cart -->
+    <rect x="-30" y="-10" width="20" height="20" rx="3" fill="none" stroke="url(#accent8)" stroke-width="2" opacity="0.6"/>
+    <rect x="-5" y="-15" width="20" height="25" rx="3" fill="none" stroke="url(#accent8)" stroke-width="2" opacity="0.6"/>
+    <rect x="20" y="-5" width="20" height="15" rx="3" fill="none" stroke="url(#accent8)" stroke-width="2" opacity="0.6"/>
+    <!-- Sparkle accents -->
+    <circle cx="80" cy="-60" r="3" fill="url(#accent8)" opacity="0.7"/>
+    <circle cx="95" cy="-45" r="2" fill="url(#accent8)" opacity="0.5"/>
+    <circle cx="70" cy="-40" r="2" fill="url(#accent8)" opacity="0.5"/>
+  </g>
+  <!-- Label -->
+  <text x="400" y="520" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">UV-MART</text>
+  <text x="400" y="550" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="white" opacity="0.4" letter-spacing="4">E-COMMERCE</text>
+</svg>

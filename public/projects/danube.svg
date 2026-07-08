@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2027"/>
+      <stop offset="50%" style="stop-color:#203a43"/>
+      <stop offset="100%" style="stop-color:#2c5364"/>
+    </linearGradient>
+    <linearGradient id="accent5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#00b4d8"/>
+    </linearGradient>
+    <filter id="glow5">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="white" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="white" stroke-width="0.5"/>
+  </g>
+  <!-- Glow orbs -->
+  <circle cx="600" cy="150" r="120" fill="#00d4ff" opacity="0.15" filter="url(#glow5)"/>
+  <circle cx="200" cy="450" r="100" fill="#00b4d8" opacity="0.1" filter="url(#glow5)"/>
+  <!-- Hotel building icon -->
+  <g transform="translate(400,300)" filter="url(#glow5)">
+    <!-- Building outline -->
+    <rect x="-70" y="-80" width="140" height="160" rx="8" fill="none" stroke="url(#accent5)" stroke-width="3"/>
+    <!-- Roof line -->
+    <path d="M-80,-80 L0,-110 L80,-80" fill="none" stroke="url(#accent5)" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Windows row 1 -->
+    <rect x="-50" y="-55" width="22" height="22" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2" opacity="0.6"/>
+    <rect x="-11" y="-55" width="22" height="22" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2" opacity="0.6"/>
+    <rect x="28" y="-55" width="22" height="22" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2" opacity="0.6"/>
+    <!-- Windows row 2 -->
+    <rect x="-50" y="-15" width="22" height="22" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2" opacity="0.6"/>
+    <rect x="-11" y="-15" width="22" height="22" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2" opacity="0.6"/>
+    <rect x="28" y="-15" width="22" height="22" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2" opacity="0.6"/>
+    <!-- Door -->
+    <rect x="-15" y="40" width="30" height="40" rx="3" fill="none" stroke="url(#accent5)" stroke-width="2.5"/>
+    <circle cx="8" cy="60" r="2" fill="url(#accent5)"/>
+  </g>
+  <!-- Label -->
+  <text x="400" y="520" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">DANUBE</text>
+  <text x="400" y="550" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="white" opacity="0.4" letter-spacing="4">HOTEL BOOKINGS</text>
+</svg>

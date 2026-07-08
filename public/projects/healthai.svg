@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2a"/>
+      <stop offset="50%" style="stop-color:#1b4332"/>
+      <stop offset="100%" style="stop-color:#2d6a4f"/>
+    </linearGradient>
+    <linearGradient id="accent6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#52e3a4"/>
+      <stop offset="100%" style="stop-color:#2dd4bf"/>
+    </linearGradient>
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg6)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="white" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="white" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="white" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="white" stroke-width="0.5"/>
+  </g>
+  <!-- Glow orbs -->
+  <circle cx="600" cy="150" r="120" fill="#52e3a4" opacity="0.15" filter="url(#glow6)"/>
+  <circle cx="200" cy="450" r="100" fill="#2dd4bf" opacity="0.1" filter="url(#glow6)"/>
+  <!-- Health + AI icon -->
+  <g transform="translate(400,300)" filter="url(#glow6)">
+    <!-- Heart pulse -->
+    <path d="M-90,0 L-50,0 L-35,-30 L-15,30 L5,-20 L25,0 L90,0"
+          fill="none" stroke="url(#accent6)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- AI node ring -->
+    <circle cx="0" cy="-70" r="6" fill="url(#accent6)"/>
+    <circle cx="-55" cy="-95" r="5" fill="url(#accent6)" opacity="0.7"/>
+    <circle cx="55" cy="-95" r="5" fill="url(#accent6)" opacity="0.7"/>
+    <circle cx="-80" cy="-50" r="4" fill="url(#accent6)" opacity="0.5"/>
+    <circle cx="80" cy="-50" r="4" fill="url(#accent6)" opacity="0.5"/>
+    <!-- Connecting lines -->
+    <line x1="0" y1="-70" x2="-55" y2="-95" stroke="url(#accent6)" stroke-width="1.5" opacity="0.4"/>
+    <line x1="0" y1="-70" x2="55" y2="-95" stroke="url(#accent6)" stroke-width="1.5" opacity="0.4"/>
+    <line x1="-55" y1="-95" x2="-80" y2="-50" stroke="url(#accent6)" stroke-width="1.5" opacity="0.4"/>
+    <line x1="55" y1="-95" x2="80" y2="-50" stroke="url(#accent6)" stroke-width="1.5" opacity="0.4"/>
+    <!-- Plus sign -->
+    <rect x="-8" y="55" width="16" height="40" rx="3" fill="none" stroke="url(#accent6)" stroke-width="2.5"/>
+    <rect x="-18" y="67" width="36" height="16" rx="3" fill="none" stroke="url(#accent6)" stroke-width="2.5"/>
+  </g>
+  <!-- Label -->
+  <text x="400" y="520" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">HEALTH-AI</text>
+  <text x="400" y="550" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" fill="white" opacity="0.4" letter-spacing="4">AI HEALTH ASSISTANT</text>
+</svg>
